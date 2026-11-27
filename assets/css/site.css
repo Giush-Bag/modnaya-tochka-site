@@ -482,3 +482,18 @@ html.ycm-on{overflow:hidden}
 .review[hidden]{display:none}
 .rv-more-all{display:flex;justify-content:center;margin:-10px 0 clamp(50px,7vw,90px)}
 .rv-more-all .btn[hidden]{display:none}
+
+/* Документы по 152-ФЗ (/privacy, /soglasie): простой читаемый макет */
+.legal-doc{max-width:720px;padding-bottom:clamp(60px,8vw,110px)}
+.legal-h1{font-family:var(--serif);font-weight:500;font-size:clamp(34px,4.4vw,52px);line-height:1.1;margin-top:22px}
+.legal-rev{margin-top:12px;font-size:14px;color:var(--brown-l)}
+.legal-doc .legal{max-width:none;padding-bottom:0;margin-top:34px}
+.legal-doc .legal h2{font-size:clamp(24px,2.4vw,30px);margin:38px 0 12px;scroll-margin-top:110px}
+.legal-doc .legal p,.legal-doc .legal li{font-size:16.5px;line-height:1.65}
+.legal-doc .legal a{word-break:break-word}
+
+/* строка про сервисы записи под кнопками «Записаться» и согласие в формах */
+.book-note{margin-top:10px;font-size:12.5px;line-height:1.45;color:var(--brown-l)}
+.book-note a{color:inherit;text-decoration:underline;text-underline-offset:2px}
+.book .book-note{color:#cdbbb3}
+.foot-legal{display:flex;flex-wrap:wrap;gap:4px 24px}
