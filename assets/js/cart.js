@@ -8,7 +8,7 @@ const fmt=n=>Math.round(n).toLocaleString('ru-RU').replace(/ | /g,' ');
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const csrf=()=>document.querySelector('meta[name=csrf-token]')?.content||'';
 const SHOP=document.body.dataset.shopUrl||'/shop';
-const PRIVACY=document.body.dataset.privacyUrl||'/privacy', CONSENT=document.body.dataset.consentUrl||'/soglasie';
+const PRIVACY=document.body.dataset.privacyUrl||'/privacy';
 document.documentElement.classList.add('js');
 
 /* Магазин выключен в настройках — корзина не создаётся, остаются только анимации появления. */
@@ -41,7 +41,7 @@ d.innerHTML=`
     <label>Телефон<input name="p" type="tel" required maxlength="30" autocomplete="tel" placeholder="+7 ___ ___-__-__"></label>
     <label>Получение<select name="g"><option>Самовывоз из студии</option></select></label>
     <label>Комментарий<textarea name="c" maxlength="1000" placeholder="Удобное время, вопросы"></textarea></label>
-    <label class="consent"><input type="checkbox" name="consent" value="1" required><span>Я даю <a href="${esc(CONSENT)}" target="_blank">согласие на обработку персональных данных</a> и ознакомлен(а) с <a href="${esc(PRIVACY)}" target="_blank">политикой</a></span></label>
+    <label class="consent"><input type="checkbox" name="consent" value="1" required><span>Я даю согласие на обработку персональных данных и ознакомлен(а) с <a href="${esc(PRIVACY)}" target="_blank">политикой</a></span></label>
     <div class="cart-sum"><span>К оплате при получении</span><b class="cart-total">0 ₽</b></div>
     <button class="btn btn-main" type="submit">Отправить заказ</button>
     <p class="cart-msg" aria-live="polite"></p>
